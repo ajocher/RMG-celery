@@ -6,7 +6,7 @@ from rmgpy.data.rmg import RMGDatabase
 from rmgpy.molecule import Molecule
 from rmgpy.scoop_framework.util import map_
 
-def simple_react(n):
+def simple_react(n_cp, n_iter):
     # load RMG database to create reactions
     database = RMGDatabase()
 
@@ -24,14 +24,17 @@ def simple_react(n):
     mol1 = Molecule().fromSMILES('CCCCCCCCC1CCCC2C=CC=CC=21')
 
     mol_tuple = (mol0, mol1)
-    mol_tuples = [mol_tuple]*n
 
-    results = map_(react_molecules_wrapper,
-                   mol_tuples)
+    reactions = []
+    for _ in range(n_iter):
+        mol_tuples = [mol_tuple]*n_cp
+        results = map_(react_molecules_wrapper,
+                       mol_tuples)
 
-    reactions = itertools.chain.from_iterable(results)
+        reactions_iter = itertools.chain.from_iterable(results)
+        reactions.extend(list(reactions_iter))
 
-    return list(reactions)
+    return reactions
 
 def react_molecules_wrapper(reactants):
 
@@ -41,4 +44,4 @@ def react_molecules_wrapper(reactants):
 
 if __name__ == '__main__':
 
-    print simple_react(100)
+    print len(simple_react(n_cp=1, n_iter=1))
