@@ -20,6 +20,8 @@ app = Celery('celery_framework',
 # Optional configuration, see the application user guide.
 app.conf.update(
     result_expires=3600,
+    result_serializer='pickle',
+    accept_content=['pickle', 'json']
 )
 
 ###############################################################################

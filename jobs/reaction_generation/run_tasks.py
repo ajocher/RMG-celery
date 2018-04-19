@@ -1,8 +1,8 @@
-from celery_framework.reaction_generation import database_setup
+from celery_framework.reaction_generation import simple_react
 import time
 
 if __name__ == '__main__':
-    result = database_setup.delay()
+    result = simple_react.delay()
     # at this time, our task is not finished, so it will return False
     print 'Task finished? ', result.ready()
     print 'Task result: ', result.result
