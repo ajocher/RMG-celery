@@ -1,8 +1,8 @@
-from celery_framework.tasks import longtime_add
+from celery_framework.mini_tasks import longtime_add
 import time
 
 if __name__ == '__main__':
-    result = longtime_add.delay(1,2)
+    result = longtime_add.delay(1, 2)
     # at this time, our task is not finished, so it will return False
     print 'Task finished? ', result.ready()
     print 'Task result: ', result.result

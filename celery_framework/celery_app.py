@@ -14,7 +14,8 @@ from celery import Celery
 app = Celery('celery_framework',
              broker='pyamqp://',
              backend = 'rpc://',
-             include=['celery_framework.tasks'])
+             include=['celery_framework.mini_tasks',
+             		  'celery_framework.reaction_generation'])
 
 # Optional configuration, see the application user guide.
 app.conf.update(

@@ -3,4 +3,4 @@
 source activate rmg_celery_env
 
 # Start celery worker.
-celery multi start w1 -A celery_framework.tasks --loglevel=info
+celery multi start w1 -A celery_framework.celery_app:app --loglevel=info
