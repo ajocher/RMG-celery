@@ -1,3 +1,4 @@
+import sys
 import itertools
 
 from rmgpy import settings
@@ -26,15 +27,14 @@ def simple_react(n_cp, n_iter):
     mol_tuple = (mol0, mol1)
 
     reactions = []
-    for _ in range(n_iter):
+    for i in range(n_iter):
         mol_tuples = [mol_tuple]*n_cp
         results = map_(react_molecules_wrapper,
                        mol_tuples)
 
         reactions_iter = itertools.chain.from_iterable(results)
-        reactions.extend(list(reactions_iter))
+        print "{0} iter: {1} reactions.".format(i, len(list(reactions_iter)))
 
-    return reactions
 
 def react_molecules_wrapper(reactants):
 
@@ -43,5 +43,6 @@ def react_molecules_wrapper(reactants):
                            prod_resonance=False)
 
 if __name__ == '__main__':
-
-    print len(simple_react(n_cp=1, n_iter=1))
+    n_cp = int(sys.argv[1])
+    n_iter = int(sys.argv[2])
+    simple_react(n_cp, n_iter)
