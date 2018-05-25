@@ -34,7 +34,8 @@ dependencies:
   - symmetry
   - mopac
   - graphviz
-  - scoop
+#  - scoop
+  - scoop_jun2017
   - ffmpeg
   - jupyter
   - networkx

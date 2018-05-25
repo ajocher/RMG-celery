@@ -1,0 +1,7 @@
+Rabbitmq is installed and started on RMG-server. 
+User communication with the rabbit node is only allowed when the Erlang cookie /var/lib/rabbitmq/.erlang.cookie (used by the server) is the same as $HOME/.erlang.cookie (used by Command Line (CLI) tools). Note that since the value of $HOME varies from user to user, it’s necessary to place a copy of the cookie file for each user that will be using the CLI tools. 
+
+To check the rabbitmq status execute:
+
+rabbitmqctl status
+
