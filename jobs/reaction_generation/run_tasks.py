@@ -15,6 +15,7 @@ if __name__ == '__main__':
     print 'Task state:', result.state
     
     result.get(timeout=45000)
+    print 'Number of reactions generated: ', len(list(itertools.chain.from_iterable(result.result)))
     # print 'Task result: ', result.result
 
     print 'Task state:', result.state

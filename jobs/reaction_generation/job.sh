@@ -8,17 +8,16 @@ source activate rmg_celery_env
 
 
 # Start celery worker.
-celery multi start w1 -A celery_framework.celery_app:app \
- --loglevel=info \
- --pidfile=%n.pid \
- --logfile=%n%I.log
-
+# Concurrency is the number of prefork worker processes used to process 
+# the tasks concurrently.
+celery multi start w1 -A celery_framework.celery_app:app --concurrency=2 \
+ --loglevel=debug --logfile=nI.log 
 
 # Activate Python environment and run program.
 source activate rmg_celery_env
 echo "Python tasks are now executing."
 
-n_cp=1 #2500
+n_cp=1000 #2500
 n_iter=1
 python run_tasks.py ${n_cp} ${n_iter}
 
