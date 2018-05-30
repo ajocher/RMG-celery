@@ -21,8 +21,8 @@ def simple_react(n_cp, n_iter):
 
     kinetics_db = database.kinetics
     mol0 = Molecule().fromSMILES('CCCCCCCCC1CCCc2ccccc21')
-
     mol1 = Molecule().fromSMILES('CCCCCCCCC1CCCC2C=CC=CC=21')
+    mol2 = Molecule().fromSMILES('CC')
 
     mol_tuple = (mol0, mol1)
 
