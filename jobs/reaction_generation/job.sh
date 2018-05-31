@@ -17,7 +17,7 @@ celery multi start w1 -A celery_framework.celery_app:app --concurrency=2 \
 source activate rmg_celery_env
 echo "Python tasks are now executing."
 
-n_cp=1000 #2500
+n_cp=10 #2500
 n_iter=1
 python run_tasks.py ${n_cp} ${n_iter}
 

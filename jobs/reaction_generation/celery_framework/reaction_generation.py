@@ -48,10 +48,20 @@ def simple_react(n_cp, n_iter):
     reactions = []
     for i in range(n_iter):
         mol_tuples = [mol_tuple]*n_cp
-        result = map(react_molecules_wrapper, mol_tuples)
 
-        reactions_iter = itertools.chain.from_iterable(result)
-        print "{0} iter: {1} reactions.".format(i, len(list(reactions_iter)))
+        # Execute celery map
+#        result = map(react_molecules_wrapper, mol_tuples)
+
+        # Execute celery map and group
+        result2 = group(map(react_molecules_wrapper, mol_tuples))
+        result = result2.join()
+
+        # Execute celery map, chunks and group
+#        result2 = chunks(map(react_molecules_wrapper, mol_tuples),2).group()
+#        result = result2.join()
+
+#        reactions_iter = itertools.chain.from_iterable(result)
+#        print "{0} iter: {1} reactions.".format(i, len(list(reactions_iter)))
 
     return result
 
