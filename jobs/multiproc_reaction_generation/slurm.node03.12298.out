@@ -1,0 +1,406 @@
+Python tasks are now executing.
+Initializing pool with  12  processes.
+('Information regarding memory usage:', svmem(total=101339447296, available=100477829120, percent=0.9, used=708890624, free=99459948544, active=926380032, inactive=369901568, buffers=74821632, cached=1095786496, shared=69632, slab=180207616))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    226.3 MiB    226.3 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    226.3 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    226.4 MiB      0.2 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    759.3 MiB    532.8 MiB       r.wait()
+    31                                
+    32    759.3 MiB      0.0 MiB       return tmp
+
+
+0 iter: 9792 reactions.
+Current (Resident) memory consumption 786116.
+('Information regarding memory usage:', svmem(total=101339447296, available=97641918464, percent=3.6, used=3544801280, free=96624070656, active=3736502272, inactive=369901568, buffers=74821632, cached=1095753728, shared=86016, slab=180924416))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    757.6 MiB    757.6 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    757.6 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    757.6 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    759.3 MiB      1.6 MiB       r.wait()
+    31                                
+    32    759.3 MiB      0.0 MiB       return tmp
+
+
+1 iter: 9792 reactions.
+Current (Resident) memory consumption 786116.
+('Information regarding memory usage:', svmem(total=101339447296, available=97621856256, percent=3.7, used=3564863488, free=96603860992, active=3753218048, inactive=369901568, buffers=74821632, cached=1095901184, shared=86016, slab=181039104))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    757.6 MiB    757.6 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    757.6 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    757.6 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    759.2 MiB      1.6 MiB       r.wait()
+    31                                
+    32    759.2 MiB      0.0 MiB       return tmp
+
+
+2 iter: 9792 reactions.
+Current (Resident) memory consumption 786116.
+('Information regarding memory usage:', svmem(total=101339447296, available=97529110528, percent=3.8, used=3657609216, free=96511053824, active=3846344704, inactive=369893376, buffers=74821632, cached=1095962624, shared=86016, slab=180981760))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    757.6 MiB    757.6 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    757.6 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    757.6 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    759.9 MiB      2.2 MiB       r.wait()
+    31                                
+    32    759.9 MiB      0.0 MiB       return tmp
+
+
+3 iter: 9792 reactions.
+Current (Resident) memory consumption 786776.
+('Information regarding memory usage:', svmem(total=101339447296, available=96993660928, percent=4.3, used=4193058816, free=95975571456, active=4382097408, inactive=369876992, buffers=74821632, cached=1095995392, shared=86016, slab=181104640))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    759.5 MiB    759.5 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    759.5 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    759.5 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    803.3 MiB     43.8 MiB       r.wait()
+    31                                
+    32    803.3 MiB      0.0 MiB       return tmp
+
+
+4 iter: 9792 reactions.
+Current (Resident) memory consumption 832584.
+('Information regarding memory usage:', svmem(total=101339447296, available=96964579328, percent=4.3, used=4222140416, free=95946518528, active=4408299520, inactive=369876992, buffers=74821632, cached=1095966720, shared=86016, slab=180436992))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    803.3 MiB    803.3 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    803.3 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    803.3 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    788.0 MiB    -15.3 MiB       r.wait()
+    31                                
+    32    788.0 MiB      0.0 MiB       return tmp
+
+
+5 iter: 9792 reactions.
+Current (Resident) memory consumption 832584.
+('Information regarding memory usage:', svmem(total=101339447296, available=96894316544, percent=4.4, used=4292403200, free=95876362240, active=4483825664, inactive=369876992, buffers=74821632, cached=1095860224, shared=86016, slab=181293056))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    788.0 MiB    788.0 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    788.0 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    788.0 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    819.3 MiB     31.2 MiB       r.wait()
+    31                                
+    32    819.3 MiB      0.0 MiB       return tmp
+
+
+6 iter: 9792 reactions.
+Current (Resident) memory consumption 848748.
+('Information regarding memory usage:', svmem(total=101339447296, available=96798109696, percent=4.5, used=4388610048, free=95780020224, active=4575178752, inactive=369876992, buffers=74821632, cached=1095995392, shared=86016, slab=181071872))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    819.3 MiB    819.3 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    819.3 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    819.3 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    821.5 MiB      2.2 MiB       r.wait()
+    31                                
+    32    821.5 MiB      0.0 MiB       return tmp
+
+
+7 iter: 9792 reactions.
+Current (Resident) memory consumption 848748.
+('Information regarding memory usage:', svmem(total=101339447296, available=97297637376, percent=4.0, used=3889082368, free=96279523328, active=4072333312, inactive=369881088, buffers=74829824, cached=1096011776, shared=86016, slab=181956608))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    821.5 MiB    821.5 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    821.5 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    821.5 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    759.4 MiB    -62.1 MiB       r.wait()
+    31                                
+    32    759.4 MiB      0.0 MiB       return tmp
+
+
+8 iter: 9792 reactions.
+Current (Resident) memory consumption 848748.
+('Information regarding memory usage:', svmem(total=101339447296, available=96972881920, percent=4.3, used=4213837824, free=95954763776, active=4396236800, inactive=369881088, buffers=74829824, cached=1096015872, shared=86016, slab=183042048))
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Initializing pool with  12  processes.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    20    759.4 MiB    759.4 MiB   @profile
+    21                             def parallel(mol_tuples_chunks, p):
+    22    759.4 MiB      0.0 MiB       tmp = []
+    23                             
+    24                                 # Execute multiprocessing map. It blocks until the result is ready.
+    25                                 # This method chops the iterable into a number of chunks which it 
+    26                                 # submits to the process pool as separate tasks. 
+    27                                 # The (approximate) size of these chunks can be specified by setting 
+    28                                 # chunksize to a positive integer.
+    29    759.4 MiB      0.0 MiB       r = p.map_async(react_molecules_wrapper, mol_tuples_chunks, chunksize=1, callback=tmp.append)
+    30    841.6 MiB     82.3 MiB       r.wait()
+    31                                
+    32    841.6 MiB      0.0 MiB       return tmp
+
+
+9 iter: 9792 reactions.
+Current (Resident) memory consumption 871648.
+Filename: /data1/ajocher/codes/RMG/Agnes_tests/RXNgeneration/RMG-celery/jobs/multiproc_reaction_generation/reaction_generation.py
+
+Line #    Mem usage    Increment   Line Contents
+================================================
+    34     94.7 MiB     94.7 MiB   @profile
+    35                             def simple_react(n_cp, n_iter, n_pool):
+    36                                 # load RMG database to create reactions
+    37     94.7 MiB      0.0 MiB       database = RMGDatabase()
+    38                             
+    39     94.7 MiB      0.0 MiB       database.load(
+    40     94.7 MiB      0.0 MiB           path = settings['database.directory'], 
+    41     94.7 MiB      0.0 MiB           thermoLibraries = ['primaryThermoLibrary'], # can add others if necessary
+    42     94.7 MiB      0.0 MiB           kineticsFamilies = 'all', 
+    43     94.7 MiB      0.0 MiB           reactionLibraries = [], 
+    44    226.2 MiB    131.5 MiB           kineticsDepositories = ''
+    45                                 )
+    46                             
+    47    226.2 MiB      0.0 MiB       kinetics_db = database.kinetics
+    48                             
+    49    226.2 MiB      0.0 MiB       mol0 = Molecule().fromSMILES('CCCCCCCCC1CCCc2ccccc21')
+    50    226.2 MiB      0.0 MiB       mol1 = Molecule().fromSMILES('CCCCCCCCC1CCCC2C=CC=CC=21')
+    51    226.2 MiB      0.0 MiB       mol2 = Molecule().fromSMILES('CC')
+    52                             
+    53    226.2 MiB      0.0 MiB       mol_tuple = (mol0, mol1)
+    54                             
+    55    226.3 MiB      0.1 MiB       p = Pool(processes=n_pool, initializer=initPool, initargs=(n_pool, ), maxtasksperchild=2)
+    56                                 
+    57    841.5 MiB    -77.4 MiB       for i in range(n_iter):
+    58    821.5 MiB    -77.4 MiB           result = []
+    59                                 
+    60    821.5 MiB    -77.4 MiB           mol_tuples = [mol_tuple]*n_cp
+    61                             
+    62                                     # Check the number of cores and memory usage
+    63    821.5 MiB    -77.4 MiB           print("Information regarding memory usage:",psutil.virtual_memory())
+    64                                     #    num_cores = psutil.cpu_count()
+    65                                     #    print("This kernel has ",num_cores,"cores and you can find the information regarding the memory usage:",psutil.virtual_memory())
+    66                             
+    67    841.6 MiB    543.3 MiB           result = parallel(mol_tuples, p)
+    68                             
+    69    841.6 MiB    -77.5 MiB           print '{0} iter: {1} reactions.'.format(i, len(list(itertools.chain.from_iterable(*result))))
+    70    841.5 MiB    -83.0 MiB           result = None
+    71                              
+    72                                     # resource module for finding the current (Resident) memory
+    73                                     # consumption (actual RAM that the program is using) in byte
+    74    841.5 MiB    -77.4 MiB           print 'Current (Resident) memory consumption {0}.'.format(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
+    75                                 
+    76    841.5 MiB      0.0 MiB       p.close()
+    77                             
+    78    841.5 MiB      0.0 MiB       return result
+
+
+494.945033073
+Python tasks are now completed.
